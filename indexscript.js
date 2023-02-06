@@ -150,10 +150,12 @@ function addcasher() {
     createcashernamebutton.setAttribute('onclick', 'newcasher()',)
     createcashernamebutton.setAttribute('value', nametext)
     createcashernamebutton.setAttribute('id', nametext)
+    createcashernamebutton.setAttribute(selectaudio.play())
     
     document.getElementById('addcashername').value = "";
     document.getElementById('addpin').value = "";
 
+    
 }
 
 
@@ -162,6 +164,7 @@ function newcasher() {
    let loginnewcasher = document.getElementById(localStorage.getItem('new_casher')).value
 
    cashernamedisplay.value = loginnewcasher
+   selectaudio.play()
 }
 
 
