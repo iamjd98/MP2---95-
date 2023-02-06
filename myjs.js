@@ -383,6 +383,7 @@ function getreceiptdetails() {
     document.getElementById('receiptcash').innerHTML = localStorage.getItem('receipt_amountpaid')
     document.getElementById('receiptchange').innerHTML = localStorage.getItem('receipt_amountchange')
     document.getElementById('receiptorderid').innerHTML = document.getElementById('ordernumberspantag').innerHTML
+    document.getElementById('receiptcasher').innerHTML = document.getElementById('poscashername').innerHTML
 }
 
 
