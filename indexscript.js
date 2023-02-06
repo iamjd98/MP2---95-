@@ -66,6 +66,8 @@ var forms = document.querySelectorAll('.needs-validation')
     selectaudio.play()
   };
 
+
+
   function clearform() {
     cashernamedisplay.value = "";
     pindisplay.value = "";
@@ -98,28 +100,7 @@ var forms = document.querySelectorAll('.needs-validation')
 };
 
 
-function authentication() {
-    var pincode = document.getElementById('pindisplay').value;
-    if(pincode === "123123"  && cashernamedisplay.value === "Jan Denver") {
-        window.location.assign("mainpos.html");
-        alert("Welcome Jan Denver. You are now logged in. Tap Ok to continue.")
-    } else if (pincode === "456456"  && cashernamedisplay.value === "Christine S.") {
-        window.location.assign("mainpos.html");
-        alert("Welcome Christine. You are now logged in. Tap Ok to continue.")
-    } else if (pincode === "102102"  && cashernamedisplay.value === "Juan Cruz") {
-        window.location.assign("mainpos.html");
-        alert("Welcome Juan. You are now logged in. Tap Ok to continue.")
-    } else if (pincode === "789789"  && cashernamedisplay.value === "Taylor S.") {
-        window.location.assign("mainpos.html");
-        alert("Welcome Taylor. You are now logged in. Tap Ok to continue.")
-    } else {
-        alert('Wrong Pin Code. Try Again!');
-        return;
-    }
 
-    namedisplay()
-    noBack()
-}
 
 
 
@@ -141,4 +122,75 @@ selectaudio.volume = 1;
 window.history.forward();
 function noBack() {
     window.history.forward();
+}
+
+
+
+function addcasher() {
+    let namebuttoncon = document.getElementById('cashernamebuttoncon')
+    let addcasherinput = document.getElementById('addcashername').value
+    let addpininput = document.getElementById('addpin').value
+
+
+    localStorage.setItem('new_casher', addcasherinput);
+    localStorage.setItem('new_pin', addpininput);
+
+
+    const nametext = localStorage.getItem('new_casher')
+
+    const creatediv = document.createElement('div')
+    const createcashernamebutton = document.createElement('button')
+    const createname = document.createTextNode(nametext);
+
+    namebuttoncon.appendChild(creatediv)
+    creatediv.appendChild(createcashernamebutton)
+    createcashernamebutton.appendChild(createname)
+    creatediv.className = 'col-sm-3 m-3'
+    createcashernamebutton.className = 'btn btn-primary'
+    createcashernamebutton.setAttribute('onclick', 'newcasher()',)
+    createcashernamebutton.setAttribute('value', nametext)
+    createcashernamebutton.setAttribute('id', nametext)
+    
+    document.getElementById('addcashername').value = "";
+    document.getElementById('addpin').value = "";
+
+}
+
+
+
+function newcasher() {
+   let loginnewcasher = document.getElementById(localStorage.getItem('new_casher')).value
+
+   cashernamedisplay.value = loginnewcasher
+}
+
+
+function authentication() {
+
+    const getname = localStorage.getItem('new_casher')
+    const getpin = localStorage.getItem('new_pin')
+    
+    var pincode = document.getElementById('pindisplay').value;
+    if(pincode === "123122"  && cashernamedisplay.value === "Jan Denver") {
+        window.location.assign("mainpos.html");
+        alert("Welcome Jan Denver. You are now logged in. Tap Ok to continue.")
+    } else if (pincode === "456456"  && cashernamedisplay.value === "Christine S.") {
+        window.location.assign("mainpos.html");
+        alert("Welcome Christine. You are now logged in. Tap Ok to continue.")
+    } else if (pincode === "102102"  && cashernamedisplay.value === "Juan Cruz") {
+        window.location.assign("mainpos.html");
+        alert("Welcome Juan. You are now logged in. Tap Ok to continue.")
+    } else if (pincode === localStorage.getItem('new_pin')  && cashernamedisplay.value === "Taylor S.") {
+        window.location.assign("mainpos.html");
+        alert("Welcome Taylor. You are now logged in. Tap Ok to continue.")
+    } else if (pincode == getpin  && cashernamedisplay.value == getname) {
+        window.location.assign("mainpos.html");
+        alert("Welcome Taylor. You are now logged in. Tap Ok to continue.")
+    } else {
+        alert('Wrong Pin Code. Try Again!');
+        return;
+    }
+
+    namedisplay()
+    noBack()
 }
