@@ -188,7 +188,7 @@ function authentication() {
         alert("Welcome Taylor. You are now logged in. Tap Ok to continue.")
     } else if (pincode == getpin  && cashernamedisplay.value == getname) {
         window.location.assign("mainpos.html");
-        alert("Welcome Taylor. You are now logged in. Tap Ok to continue.")
+        alert("Welcome " + getname +  ". You are now logged in. Tap Ok to continue.")
     } else {
         alert('Wrong Pin Code. Try Again!');
         return;
