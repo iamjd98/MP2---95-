@@ -119,10 +119,7 @@ selectaudio.src = "./assets/selectbeep.mp3"
 selectaudio.volume = 1;
 
 
-window.history.forward();
-function noBack() {
-    window.history.forward();
-}
+
 
 
 
@@ -196,4 +193,10 @@ function authentication() {
 
     namedisplay()
     noBack()
+}
+
+
+window.history.forward();
+function noBack() {
+    window.history.forward();
 }
