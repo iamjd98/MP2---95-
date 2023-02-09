@@ -397,7 +397,9 @@
 
                            <center><img src="./assets/gcash_qr.jpg" id="gcashqr" alt="Gcash QR code" style="width: 300px;"></center>
 
-                           <center><button id="donepaywithgcashbtn" class="btn btn-warning rounded" onclick="donepaywithgcash()">Done</button></center>
+                           <center><button id="donepaywithgcashbtn" class="btn btn-warning rounded mb-2 fw-bold w-25" onclick="donepaywithgcash()">Confirm G-cash Payment</button></center>
+
+                           <center><button id="cancelpaywithgcashbtn" class="btn btn-danger rounded fw-bold w-25" onclick="cancelpaywithgcash()">Cancel</button></center>
 
                            <hr>
 
@@ -470,6 +472,7 @@
           <p>Received Cash: ₱<span id="receiptcash"></span> </p>
           <p>Change Amount: ₱<span id="receiptchange"></span></p>
           <p>Assigned Casher: <span id="receiptcasher"></span></p>
+          <p>Mode of Payment: <span id="receiptmop">Cash</span></p>
           <hr>
           <center><p>Thank you for dining with us. Hope to serve you again soon.</p></center>
 
