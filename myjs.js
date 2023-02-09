@@ -5,9 +5,22 @@ setInterval(() => {
 
     let date = new Date();
     time.innerHTML = date.toLocaleTimeString();
-    receipttime.innerHTML = date.toLocaleTimeString();
     
 }, 1000);
+
+
+const myInterval = setInterval(receipt_time, 1000);
+
+function receipt_time() {
+    const date = new Date();
+    receipttime.innerHTML = date.toLocaleTimeString();
+}
+
+function stopclock() {
+    clearInterval(myInterval);
+}
+
+  
 
 
 document.getElementById('poscashername').innerHTML = localStorage.getItem('casher_name')
