@@ -299,6 +299,7 @@ function exactamount () {
 function calculatorcancel () {
 calculatorscreen.value = '';
 customeramountpaid.value = '';
+document.getElementById('amountchange').value = "";
 enableconfirmpaidbutton()
 };
 
@@ -397,6 +398,24 @@ function getreceiptdetails() {
     document.getElementById('receiptchange').innerHTML = localStorage.getItem('receipt_amountchange')
     document.getElementById('receiptorderid').innerHTML = document.getElementById('ordernumberspantag').innerHTML
     document.getElementById('receiptcasher').innerHTML = document.getElementById('poscashername').innerHTML
+}
+
+const paywithgcashbtn = document.getElementById('paywithgcashbtn')
+const donepaywithgcashbtn = document.getElementById('donepaywithgcashbtn')
+const gcashqr = document.getElementById('gcashqr')
+
+function paywithgcash() {
+    gcashqr.style.display = "block"
+    donepaywithgcashbtn.style.display = "block"
+    paywithgcashbtn.style.display = "none"
+}
+
+function donepaywithgcash() {
+    gcashqr.style.display = "none"
+    donepaywithgcashbtn.style.display = "none"
+    paywithgcashbtn.style.display = "block"
+
+    exactamount ()
 }
 
 

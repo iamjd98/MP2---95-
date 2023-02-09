@@ -356,9 +356,9 @@
                         <div class="modal-body">
                        
                            <div class="row mb-2">
-                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-lg">Table No.</label>
+                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-sm">Table No.</label>
                             <div class="col-sm-8">
-                                <select class="form-control form-control-lg text-center" id="customername" placeholder="Enter Customer No.">
+                                <select class="form-control form-control-sm text-center" id="customername" placeholder="Enter Customer No.">
                                     <option value="Table 1">Table 1</option>
                                     <option value="Table 2">Table 2</option>
                                     <option value="Table 3">Table 3</option>
@@ -371,27 +371,36 @@
                            </div> 
 
                            <div class="row mb-2">
-                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-lg">Amount to Pay:</label>
+                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-sm">Amount to Pay:</label>
                             <div class="col-sm-8">
-                                <input type="number" step="0.01" class="form-control fw-bold form-control-lg text-center" id="amount" placeholder="Amount to be Paid" disabled>
+                                <input type="number" step="0.01" class="form-control fw-bold form-control-sm text-center" id="amount" placeholder="Amount to be Paid" disabled>
                             </div>
                            </div>
                            
                            <div class="row mb-2">
-                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-lg">Cash Amount:</label>
+                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-sm">Cash Amount:</label>
                             <div class="col-sm-8">
-                                <input value="0" type="number" step="0.01" class="form-control  fw-bold form-control-lg text-center" id="customeramountpaid" placeholder="Cash Amount" disabled>
+                                <input value="0" type="number" step="0.01" class="form-control  fw-bold form-control-sm text-center" id="customeramountpaid" placeholder="Cash Amount" disabled>
                             </div>
                            </div>
 
                            <div class="row mb-2">
-                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-lg">Change</label>
+                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-sm">Change</label>
                             <div class="col-sm-8">
-                                <input id="amountchange" type="number" step="0.01" class="form-control text-danger fw-bold form-control-lg text-center"  placeholder="Change Amount" disabled>
+                                <input id="amountchange" type="number" step="0.01" class="form-control text-danger fw-bold form-control-sm text-center"  placeholder="Change Amount" disabled>
                             </div>
                            </div>
 
                            <hr>
+
+                           <center><button id="paywithgcashbtn" class="btn btn-warning rounded" onclick="paywithgcash()">Pay with G-cash</button></center>
+
+                           <center><img src="./assets/gcash_qr.jpg" id="gcashqr" alt="Gcash QR code" style="width: 300px;"></center>
+
+                           <center><button id="donepaywithgcashbtn" class="btn btn-warning rounded" onclick="donepaywithgcash()">Done</button></center>
+
+                           <hr>
+
 
 
                            <div class="container-fluid mx-auto row">

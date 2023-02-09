@@ -32,6 +32,12 @@
     overflow-y: scroll ;
 }
 
-#noitems {
-   visibility:  ;
+
+
+#gcashqr {
+    display: none;
+}
+
+#donepaywithgcashbtn {
+    display: none;
 }
