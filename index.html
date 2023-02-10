@@ -16,10 +16,10 @@
 
 
 
-<div class="container col-4 rounded p-4 shadow" style="background-color: rgb(252, 238, 192);"> 
+<div class="container col-sm-4 " > 
      
     
-
+    <div class="rounded p-4 shadow" style="background-color: rgb(252, 238, 192);">
         <center><h1 class="fw-bold">Add Casher</h1></center>
 
         <div class="form-floating mb-3">
@@ -38,13 +38,37 @@
 
         <button onclick="addcasher()" type="submit" class="btn btn-primary btn-warning fw-bold">Add Casher</button>
        
+    </div>
+
+    <button onclick="showcontactform()" id="contactsuppbtn" class="btn btn-large btn-dark fw-bold mt-3">Contact Support</button>
+
+
+    <div id="contactformcon" class="rounded p-4 shadow mt-3" style="background-color: rgb(252, 238, 192);">
+    
+    <label  for="StoreID" class="form-label fw-bold"> Verify Store-Id</label>   
+    <div class="mb-3 d-flex" style="height: 40px; width: 350px;"> 
+        <input  type="text" class="form-control m-1" maxlength="6" id="storeidinput" placeholder="6-digit unique store-id" required>
+        <button onclick="verifyid()" id="verifyidbtn" class="btn btn-sm btn-dark m-1" style="width: 200px;">Verify</button>  
+    </div>
+
+
+    <form action="https://formbold.com/s/objDd" method="POST">
+    <div class="mb-3">
+        <label for="Message" class="form-label fw-bold">Enter Message</label>
+        <textarea id="messageinput" class="form-control" id="messageinput" rows="3" required disabled></textarea>
+    </div>
+
+    <input class="btn btn-success" type="submit"  id="submitmessagebtn">
+    </form>
+    
+    </div>
 
 </div> 
 
 
 
 
-<div class="container col-4 rounded p-4 shadow" style="background-color: rgb(127, 255, 212);"> 
+<div class="container col-sm-4 rounded p-4 shadow" style="background-color: rgb(127, 255, 212);"> 
         
         <center><h1 class="fw-bold">Admin Login Portal</h1></center>
 
@@ -102,6 +126,8 @@
         
 
 </div> 
+
+
 
 
 

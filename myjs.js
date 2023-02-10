@@ -1,3 +1,5 @@
+
+
 let time = document.getElementById("current-time");
 let receipttime =  document.getElementById("receipttime");
 
@@ -191,6 +193,8 @@ function totalitems(){
     
     console.log(orderitemquantity)
 };
+
+
 
 function costitems() {
     if (orderpricearray.length === 0) {

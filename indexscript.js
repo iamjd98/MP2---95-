@@ -197,3 +197,42 @@ function authentication() {
     namedisplay()
     noBack()
 }
+
+const contactsuppbtn =  document.getElementById('contactsuppbtn')
+const contactformcon = document.getElementById('contactformcon')
+const messageinput =  document.getElementById('messageinput')
+
+
+function showcontactform() {
+  contactformcon.style.display = 'block'
+  selectaudio.play()
+}
+
+function verifyid() {
+  const storeidinput =  document.getElementById('storeidinput').value
+ 
+
+  if (storeidinput == "POS122") {
+    document.getElementById('messageinput').disabled = false;
+    document.getElementById('verifyidbtn').innerHTML = 'Verified'
+  } else {
+    document.getElementById('messageinput').disabled = true;
+    document.getElementById('verifyidbtn').innerHTML = 'Failed. Try Again'
+    document.getElementById('storeidinput').disabled = true
+    document.getElementById('verifyidbtn').className = 'btn btn-sm btn-danger m-1'
+    document.getElementById('verifyidbtn').setAttribute('onclick', 'tryagain()')
+
+  }
+  selectaudio.play()
+}
+
+
+function tryagain() {
+  document.getElementById('storeidinput').disabled = false
+  document.getElementById('verifyidbtn').innerHTML = 'Verify'
+  document.getElementById('verifyidbtn').className = 'btn btn-sm btn-dark m-1'
+  document.getElementById('verifyidbtn').setAttribute('onclick', 'verifyid()')
+
+
+  selectaudio.play()
+}
