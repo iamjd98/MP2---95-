@@ -40,15 +40,18 @@
        
     </div>
 
-    <button onclick="showcontactform()" id="contactsuppbtn" class="btn btn-large btn-dark fw-bold mt-3">Contact Support</button>
+    <button onclick="showcontactform()" id="contactsuppbtn" class="btn btn-large btn-dark fw-bold mt-3 mb-3">Contact Support</button>
 
 
-    <div id="contactformcon" class="rounded p-4 shadow mt-3" style="background-color: rgb(252, 238, 192);">
+    <div id="contactformcon" class="rounded p-4 shadow mt-3 mb-3" style="background-color: rgb(67, 214, 219);">
     
     <label  for="StoreID" class="form-label fw-bold"> Verify Store-Id</label>   
-    <div class="mb-3 d-flex" style="height: 40px; width: 350px;"> 
-        <input  type="text" class="form-control m-1" maxlength="6" id="storeidinput" placeholder="6-digit unique store-id" required>
-        <button onclick="verifyid()" id="verifyidbtn" class="btn btn-sm btn-dark m-1" style="width: 200px;">Verify</button>  
+    <div class="row d-flex" > 
+
+        <div class="col-sm-6"><input style="text-transform:uppercase; height:30px;" type="text" class="form-control m-1" maxlength="6" id="storeidinput" placeholder="6-digit unique store-id" required></div>
+        <div class="col-sm-3"><button onclick="verifyid()" id="verifyidbtn" class="btn btn-sm btn-dark m-1">Verify</button> </div>
+        
+        
     </div>
 
 
@@ -58,9 +61,12 @@
         <textarea name="message" id="messageinput" class="form-control" id="messageinput" rows="3" required disabled></textarea>
     </div>
 
-    <input class="btn btn-success" type="submit"  id="submitmessagebtn">
+    <div class="d-flex justify-content-between">
+    <input onclick="submitmessage()" class="btn btn-success" type="submit"  id="submitmessagebtn" disabled>
     </form>
-    
+    <button onclick="closeform()" class="btn btn-danger" type="button"  id="closebutton">Close</button>
+    </div>
+
     </div>
 
 </div> 

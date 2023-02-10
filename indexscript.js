@@ -201,9 +201,13 @@ function authentication() {
 const contactsuppbtn =  document.getElementById('contactsuppbtn')
 const contactformcon = document.getElementById('contactformcon')
 const messageinput =  document.getElementById('messageinput')
+const storeid = document.getElementById('storeidinput')
+
+
 
 
 function showcontactform() {
+  contactsuppbtn.style.display = 'none'
   contactformcon.style.display = 'block'
   selectaudio.play()
 }
@@ -213,9 +217,18 @@ function verifyid() {
  
 
   if (storeidinput == "POS122") {
+    document.getElementById('submitmessagebtn').disabled = false
     document.getElementById('messageinput').disabled = false;
+    document.getElementById('storeidinput').value = '✔️';
+    document.getElementById('verifyidbtn').innerHTML = 'Verified'
+  } else if (storeidinput == "pos122") {
+    document.getElementById('submitmessagebtn').disabled = false
+    document.getElementById('messageinput').disabled = false;
+    document.getElementById('storeidinput').value = '✔️';
     document.getElementById('verifyidbtn').innerHTML = 'Verified'
   } else {
+    document.getElementById('storeidinput').value = '❌';
+    document.getElementById('submitmessagebtn').disabled = true
     document.getElementById('messageinput').disabled = true;
     document.getElementById('verifyidbtn').innerHTML = 'Failed. Try Again'
     document.getElementById('storeidinput').disabled = true
@@ -228,6 +241,7 @@ function verifyid() {
 
 
 function tryagain() {
+  document.getElementById('storeidinput').value = '';
   document.getElementById('storeidinput').disabled = false
   document.getElementById('verifyidbtn').innerHTML = 'Verify'
   document.getElementById('verifyidbtn').className = 'btn btn-sm btn-dark m-1'
@@ -235,4 +249,22 @@ function tryagain() {
 
 
   selectaudio.play()
+}
+
+function closeform() {
+  contactsuppbtn.style.display = 'block'
+  contactformcon.style.display = 'none'
+  document.getElementById('storeidinput').value = '';
+  document.getElementById('messageinput').disabled = true;
+  document.getElementById('submitmessagebtn').disabled = true
+  document.getElementById('messageinput').value = '';
+  selectaudio.play()
+  tryagain()
+
+}
+
+function submitmessage() {
+  selectaudio.play()
+
+  closeform()
 }
