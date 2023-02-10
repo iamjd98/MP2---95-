@@ -259,7 +259,7 @@ function deleteitem(orderid, button){
     console.log(button.parentElement);
     orderlist.removeChild(button.parentElement);
 
-    if (orderpricearray,length === 0) {
+    if (orderpricearray.length === 0) {
         document.getElementById('amount').value = 0;
     }
     enablecheckoutbutton()
