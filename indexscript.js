@@ -150,7 +150,7 @@ function addcasher() {
     createcashernamebutton.setAttribute('onclick', 'newcasher()',)
     createcashernamebutton.setAttribute('value', nametext)
     createcashernamebutton.setAttribute('id', nametext)
-    createcashernamebutton.setAttribute(selectaudio.play())
+    //createcashernamebutton.setAttribute(selectaudio.play())
     
     document.getElementById('addcashername').value = "";
     document.getElementById('addpin').value = "";
@@ -263,8 +263,3 @@ function closeform() {
 
 }
 
-function submitmessage() {
-  selectaudio.play()
-
-  closeform()
-}
