@@ -217,16 +217,19 @@ function verifyid() {
  
 
   if (storeidinput == "POS122") {
+    document.getElementById('storenamedisplay').value = "Angel's Buger";
     document.getElementById('submitmessagebtn').disabled = false
     document.getElementById('messageinput').disabled = false;
     document.getElementById('storeidinput').value = '✔️';
     document.getElementById('verifyidbtn').innerHTML = 'Verified'
   } else if (storeidinput == "pos122") {
+    document.getElementById('storenamedisplay').value = "Angel's Buger";
     document.getElementById('submitmessagebtn').disabled = false
     document.getElementById('messageinput').disabled = false;
     document.getElementById('storeidinput').value = '✔️';
     document.getElementById('verifyidbtn').innerHTML = 'Verified'
   } else {
+    document.getElementById('storenamedisplay').value = "";
     document.getElementById('storeidinput').value = '❌';
     document.getElementById('submitmessagebtn').disabled = true
     document.getElementById('messageinput').disabled = true;
@@ -241,6 +244,7 @@ function verifyid() {
 
 
 function tryagain() {
+  document.getElementById('storenamedisplay').value = "";
   document.getElementById('storeidinput').value = '';
   document.getElementById('storeidinput').disabled = false
   document.getElementById('verifyidbtn').innerHTML = 'Verify'
