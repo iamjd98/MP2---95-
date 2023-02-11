@@ -55,7 +55,8 @@
     </div>
 
 
-    <form action="https://formbold.com/s/objDd" method="POST">
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="98d95ee0-9654-4820-84c9-75105235494d">
     <div class="mb-3">
         <label for="Message" class="form-label fw-bold">Enter Message</label>
         <textarea name="message" id="messageinput" class="form-control" id="messageinput" rows="3" required disabled></textarea>
@@ -63,6 +64,7 @@
 
     <div class="d-flex justify-content-between">
     <input onclick="submitmessage()" class="btn btn-success" type="submit"  id="submitmessagebtn" disabled>
+    <input type="hidden" name="redirect" value="https://iamjd98.github.io/MY_POS_MP2/">
     </form>
     <button onclick="closeform()" class="btn btn-danger" type="button"  id="closebutton">Close</button>
     </div>
