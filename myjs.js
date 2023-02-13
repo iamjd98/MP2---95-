@@ -182,7 +182,6 @@ function incrementitem(orderid, val) {
 
 
 function totalitems(){
-    //document.getElementById("totalitems").innerText = orderarray.length;
     if (orderitemquantity.length) {
         document.getElementById("totalitems").innerText = orderitemquantity.reduce((total, num) => {
             return total + num

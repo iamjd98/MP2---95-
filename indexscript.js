@@ -118,11 +118,12 @@ const selectaudio = new Audio();
 selectaudio.src = "./assets/selectbeep.mp3"
 selectaudio.volume = 1;
 
-
 window.history.forward();
 function noBack() {
     window.history.forward();
 }
+
+
 
 
 
@@ -145,12 +146,12 @@ function addcasher() {
     namebuttoncon.appendChild(creatediv)
     creatediv.appendChild(createcashernamebutton)
     createcashernamebutton.appendChild(createname)
-    creatediv.className = 'col-sm-3 m-3'
+    creatediv.className = " mb-2 col-md-6"
     createcashernamebutton.className = 'btn btn-primary'
     createcashernamebutton.setAttribute('onclick', 'newcasher()',)
     createcashernamebutton.setAttribute('value', nametext)
     createcashernamebutton.setAttribute('id', nametext)
-    //createcashernamebutton.setAttribute(selectaudio.play())
+    
     
     document.getElementById('addcashername').value = "";
     document.getElementById('addpin').value = "";
